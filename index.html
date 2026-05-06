@@ -327,6 +327,88 @@
     position: absolute; left: 0;
     color: var(--gold); font-size: 0.8rem;
   }
+    /* REFLECTIVE JOURNAL SECTION */
+  #reflective-journal { background: var(--bg); }
+  .journal-content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .journal-intro {
+    background: var(--bg3);
+    border-left: 4px solid var(--gold);
+    padding: 28px 32px;
+    border-radius: 4px;
+    margin-bottom: 40px;
+  }
+  .journal-intro p {
+    color: var(--muted);
+    line-height: 1.85;
+    font-size: 1.05rem;
+  }
+  .journal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .journal-card {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 28px;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .journal-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-3px);
+  }
+  .journal-icon {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    display: block;
+  }
+  .journal-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+  .journal-card p {
+    color: var(--muted);
+    line-height: 1.75;
+    font-size: 0.95rem;
+  }
+  .journal-highlights {
+    margin-top: 40px;
+    background: linear-gradient(135deg, rgba(23,174,179,0.08), rgba(72,120,200,0.05));
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 32px;
+  }
+  .journal-highlights h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+  .highlights-list {
+    list-style: none;
+    padding: 0;
+  }
+  .highlights-list li {
+    padding-left: 28px;
+    position: relative;
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 12px;
+    font-size: 1rem;
+  }
+  .highlights-list li::before {
+    content: '★';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 1.1rem;
+  }
 
   /* CERTS */
   #certs { background: var(--bg2); }
@@ -346,6 +428,156 @@
   .cert-icon { font-size: 2rem; min-width: 40px; text-align: center; }
   .cert-name { color: var(--text); font-weight: 500; font-size: 0.95rem; }
   .cert-source { color: var(--muted); font-size: 0.8rem; margin-top: 3px; }
+  /* CAREER DEVELOPMENT PLAN SECTION */
+  #career-plan { background: var(--bg2); }
+  .career-content {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .career-vision {
+    background: linear-gradient(135deg, rgba(23,174,179,0.1), rgba(72,120,200,0.08));
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 36px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .career-vision h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+  .career-vision p {
+    color: var(--muted);
+    line-height: 1.8;
+    font-size: 1.05rem;
+  }
+  .career-goals-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    margin-bottom: 40px;
+  }
+  .goal-card {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 28px;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .goal-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-3px);
+  }
+  .goal-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .goal-icon {
+    font-size: 1.8rem;
+  }
+  .goal-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white);
+  }
+  .goal-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  .goal-card li {
+    padding-left: 24px;
+    position: relative;
+    color: var(--muted);
+    line-height: 1.75;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+  }
+  .goal-card li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+  }
+  .action-plan {
+    background: var(--bg3);
+    border-left: 4px solid var(--gold);
+    border-radius: 4px;
+    padding: 32px;
+  }
+  .action-plan h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+  .action-steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .action-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .step-number {
+    background: var(--gold);
+    color: var(--bg);
+    font-weight: 700;
+    font-size: 0.85rem;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .action-step p {
+    color: var(--muted);
+    line-height: 1.7;
+    font-size: 0.95rem;
+  }
+
+  /* CERTIFICATES */
+  .certs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .cert-card {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .cert-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-3px);
+  }
+  .cert-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+  }
+  .cert-name {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+  .cert-source {
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
 
   /* CONTACT */
   #contact { background: var(--bg); }
@@ -660,6 +892,23 @@
     <h2 class="section-title reveal">Projects</h2>
     <div class="section-line reveal"></div>
     <div class="projects-grid">
+      
+      <div class="proj-card reveal">
+  <div class="proj-year">2026 · Final Year Research</div>
+  <div class="proj-title">AI-Based Integrated Traffic Violation Detection, Accident Severity Assessment, and Smart Monitoring System with Hybrid AI Appeal</div>
+  <div class="proj-stack">YOLOv8 + Machine Learning + NLP + XAI</div>
+  <p class="proj-desc">
+    A smart traffic management system that detects real-time traffic violations, assesses accident severity, and ensures transparent enforcement using hybrid AI techniques.
+  </p>
+  <ul class="proj-features">
+    <li>Real-time detection of seatbelt violations, helmet absence, and traffic signal violations using YOLOv8</li>
+    <li>Accident detection with severity classification (minor, moderate, severe) for faster emergency response</li>
+    <li>Automated Number Plate Recognition (ANPR) for vehicle identification and enforcement</li>
+    <li>Hybrid AI appeal system combining Machine Learning, NLP (TF-IDF), rule-based logic, and Explainable AI (XAI)</li>
+    <li>Real-time performance with 15–18 FPS suitable for smart city deployment</li>
+    <li>Stack: Python, YOLOv8, OpenCV, PyTorch, Scikit-learn, NLP (TF-IDF), Tesseract OCR</li>
+  </ul>
+</div>
 
       <div class="proj-card reveal">
         <div class="proj-year">2025 · Team Project</div>
@@ -773,6 +1022,204 @@
         <div>
           <div class="cert-name">Microsoft Power BI Data Analyst</div>
           <div class="cert-source">Coursera Certificate</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="reflective-journal">
+  <div class="container">
+    <div class="section-label reveal">Professional Development</div>
+    <h2 class="section-title reveal">Reflective Journal – PPW Module</h2>
+    <div class="section-line reveal"></div>
+    
+    <div class="journal-content">
+      <div class="journal-intro reveal">
+        <p>
+ PPW came to me at precisely the right moment during my academic career. What was one of the first revelations I received? It was the realization of how many hours I had wasted writing reports, documents, and e-mails without once questioning whether what I was doing was professional. This led me to reassess the way in which I had been recording information for my educational monitoring systems research project, and rewrite some parts of the progress report in a very well-organized manner. It was clear from the feedback I was receiving that my efforts had made a marked difference.
+        </p>
+      </div>
+
+      <div class="journal-grid">
+        <div class="journal-card reveal">
+          <span class="journal-icon">💬</span>
+          <h3>Communication Skills</h3>
+          <p>
+            Enhanced my ability to articulate ideas clearly through presentations, group discussions, and written assignments. 
+            Learned to adapt communication style to different audiences and contexts.
+          </p>
+        </div>
+
+        <div class="journal-card reveal">
+          <span class="journal-icon">🤝</span>
+          <h3>Teamwork & Collaboration</h3>
+          <p>
+            Developed strong collaborative skills by working on group projects, sharing responsibilities, and contributing 
+            to collective goals while respecting diverse perspectives.
+          </p>
+        </div>
+
+        <div class="journal-card reveal">
+          <span class="journal-icon">⏰</span>
+          <h3>Time Management</h3>
+          <p>
+            Learned to balance multiple commitments including studies, assignments, and self-learning. Developed prioritization 
+            strategies and efficient workflow management techniques.
+          </p>
+        </div>
+
+        <div class="journal-card reveal">
+          <span class="journal-icon">📝</span>
+          <h3>Professional Documentation</h3>
+          <p>
+            Gained comprehensive knowledge in CV writing, portfolio creation, cover letter development, 
+            office email writing, report writing, presentation preparation,
+             memo writing, and interview preparation strategies essential for career advancement.
+          </p>
+        </div>
+
+        <div class="journal-card reveal">
+          <span class="journal-icon">💪</span>
+          <h3>Overcoming Challenges</h3>
+          <p>
+            Successfully addressed initial lack of confidence through continuous practice and feedback. Improved ability to 
+            manage multiple tasks simultaneously and meet deadlines consistently.
+          </p>
+        </div>
+
+        <div class="journal-card reveal">
+          <span class="journal-icon">🎯</span>
+          <h3>Self-Awareness & Growth</h3>
+          <p>
+            Developed deeper understanding of personal strengths, areas for improvement, and learning preferences. 
+            Cultivated a growth mindset and commitment to lifelong learning.
+          </p>
+        </div>
+      </div>
+
+      <div class="journal-highlights reveal">
+        <h3>Key Takeaways & Achievements</h3>
+        <ul class="highlights-list">
+          <li>Built a strong foundation for professional growth in the IT field through integrated skill development</li>
+          <li>Improved confidence in public speaking and presenting technical concepts to non-technical audiences</li>
+          <li>Developed a systematic approach to personal and professional goal setting</li>
+          <li>Enhanced ability to work effectively in diverse teams and contribute to collaborative success</li>
+          <li>Created a professional portfolio and learned best practices for career documentation</li>
+          <li>Established habits for continuous self-reflection and skill enhancement</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- CAREER DEVELOPMENT PLAN -->
+<section id="career-plan">
+  <div class="container">
+    <div class="section-label reveal">Future Roadmap</div>
+    <h2 class="section-title reveal">Career Development Plan</h2>
+    <div class="section-line reveal"></div>
+    
+    <div class="career-content">
+      <div class="career-vision reveal">
+        <h3>Career Vision</h3>
+        <p>
+          To become a skilled Business Analyst or Data Analyst in a reputed IT organization, leveraging data to drive business 
+          decisions and create meaningful impact through innovative solutions and continuous professional growth.
+        </p>
+      </div>
+
+      <div class="career-goals-grid">
+        <div class="goal-card reveal">
+          <div class="goal-header">
+            <span class="goal-icon">🎓</span>
+            <h3>Short-Term Goals</h3>
+          </div>
+          <ul>
+            <li>Complete BSc in IT with strong academic performance (GPA 3.5+)</li>
+            <li>Master Python, SQL, and advanced Power BI techniques</li>
+            <li>Build 3-5 portfolio projects demonstrating data analysis skills</li>
+            <li>Earn certifications in Python, SQL, and cloud platforms</li>
+            <li>Secure an internship in Data Engineering or Data Analysis</li>
+          </ul>
+        </div>
+
+        <div class="goal-card reveal">
+          <div class="goal-header">
+            <span class="goal-icon">🚀</span>
+            <h3>Long-Term Goals</h3>
+          </div>
+          <ul>
+            <li>Become a professional Data Engineer/Analyst within 2-3 years</li>
+            <li>Specialize in Big Data technologies (Hadoop, Spark, Kafka)</li>
+            <li>Achieve cloud certifications (AWS, Azure Data Engineering)</li>
+            <li>Contribute to open-source data science projects</li>
+            <li>Mentor junior developers and share knowledge through blogs/talks</li>
+          </ul>
+        </div>
+
+        <div class="goal-card reveal">
+          <div class="goal-header">
+            <span class="goal-icon">🛠️</span>
+            <h3>Technical Skills Development</h3>
+          </div>
+          <ul>
+            <li>Advanced Python: Pandas, NumPy, data manipulation libraries</li>
+            <li>Database Management: PostgreSQL, MongoDB, data warehousing</li>
+            <li>Cloud Platforms: AWS (S3, Redshift, Lambda), Azure services</li>
+            <li>Big Data: Apache Spark, Hadoop ecosystem, data pipelines</li>
+            <li>Visualization: Advanced Power BI, Tableau, D3.js</li>
+          </ul>
+        </div>
+
+        <div class="goal-card reveal">
+          <div class="goal-header">
+            <span class="goal-icon">🌟</span>
+            <h3>Soft Skills Enhancement</h3>
+          </div>
+          <ul>
+            <li>Advanced communication for stakeholder presentations</li>
+            <li>Leadership skills through team project management</li>
+            <li>Critical thinking and analytical problem-solving</li>
+            <li>Adaptability to emerging technologies and methodologies</li>
+            <li>Business acumen and domain knowledge development</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="action-plan reveal">
+        <h3>Action Plan & Implementation Strategy</h3>
+        <div class="action-steps">
+          <div class="action-step">
+            <div class="step-number">1</div>
+            <p>Complete online courses on Coursera, Udemy, and DataCamp for Python, SQL, and cloud computing</p>
+          </div>
+          <div class="action-step">
+            <div class="step-number">2</div>
+            <p>Work on real-world datasets from Kaggle and GitHub to build practical portfolio projects</p>
+          </div>
+          <div class="action-step">
+            <div class="step-number">3</div>
+            <p>Apply for internships at tech companies and startups focused on data engineering</p>
+          </div>
+          <div class="action-step">
+            <div class="step-number">4</div>
+            <p>Network with professionals through LinkedIn, meetups, and industry conferences</p>
+          </div>
+          <div class="action-step">
+            <div class="step-number">5</div>
+            <p>Maintain and continuously update professional portfolio website and GitHub profile</p>
+          </div>
+          <div class="action-step">
+            <div class="step-number">6</div>
+            <p>Participate in hackathons and data science competitions to gain practical experience</p>
+          </div>
+          <div class="action-step">
+            <div class="step-number">7</div>
+            <p>Seek mentorship from experienced data professionals and regularly review progress</p>
+          </div>
+          <div class="action-step">
+            <div class="step-number">8</div>
+            <p>Stay updated with industry trends through blogs, podcasts, and technical publications</p>
+          </div>
         </div>
       </div>
     </div>
